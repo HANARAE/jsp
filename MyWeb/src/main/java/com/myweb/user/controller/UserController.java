@@ -7,10 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.myweb.user.model.UserDAO;
-import com.myweb.user.model.UserVO;
+
+import com.myweb.user.service.ChangePwService;
 import com.myweb.user.service.IUserService;
 import com.myweb.user.service.JoinService;
+import com.myweb.user.service.LoginService;
 
 
 @WebServlet("*.user")
@@ -27,6 +28,11 @@ public class UserController extends HttpServlet {
 
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		if(request.getMethod().equals("POST")) {
+			request.setCharacterEncoding("utf-8");
+		}
+		
 		
 		String uri = request.getRequestURI();
 		uri = uri.substring(request.getContextPath().length()+1, uri.lastIndexOf("."));
@@ -48,7 +54,33 @@ public class UserController extends HttpServlet {
 		case "loginPage":
 			System.out.println("로그인 페이지로 이동 요청");
 			response.sendRedirect("user/user_login.jsp");
+			break;
+		
+		case "login":
+			System.out.println("로그인 요청");
+			sv = new LoginService();
+			sv.execute(request, response);
+			break;
+		
+		case "myPage":
+			System.out.println("마이페이지로 이동 요청");
+			response.sendRedirect("user/user_mypage.jsp");
+			break;
+		
+		case "pwPage":
+			System.out.println("비밀번호 변경 페이지로 이동 요청");
+			response.sendRedirect("user/user_change_pw.jsp");
+			break;
+		
+		case "changePw":
+			System.out.println("비밀번호 변경 요청");
+			sv = new ChangePwService();
+			sv.execute(request, response);
+			break;
+			
 		}
+		
+		
 		
 	}
 

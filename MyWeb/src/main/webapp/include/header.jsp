@@ -62,7 +62,7 @@
 					<li><a href="">HOME</a></li>
 					<li><a href="">Member</a></li>
 					<li><a href="">BOARD</a></li>
-					<li><a href="">LOGIN</a></li>
+					<li><a href="/MyWeb/loginPage.user">LOGIN</a></li>
 					<li><a href="/MyWeb/joinPage.user" style="color: red">JOIN</a></li>
 				</ul>
 			</div>
