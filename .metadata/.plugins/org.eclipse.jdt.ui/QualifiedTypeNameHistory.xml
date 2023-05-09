@@ -16,12 +16,13 @@
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="com.myweb.board.service.IBoardService"/>
     <fullyQualifiedTypeName name="com.myweb.board.model.IBoardDAO"/>
-    <fullyQualifiedTypeName name="com.myweb.board.model.BoardDAO"/>
-    <fullyQualifiedTypeName name="com.myweb.board.model.BoardVO"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="com.myweb.board.model.BoardDAO"/>
+    <fullyQualifiedTypeName name="com.myweb.board.model.BoardVO"/>
+    <fullyQualifiedTypeName name="com.myweb.user.service.UpdateService"/>
 </qualifiedTypeNameHistroy>
