@@ -84,7 +84,7 @@ public class UserVO {
 		return userAddress;
 	}
 
-	public void setUserAdress(String userAddress) {
+	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
 	}
 

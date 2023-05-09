@@ -34,12 +34,14 @@ public class ChangePwService implements IUserService {
 		
 		
 		HttpSession session = request.getSession();
-		UserVO user = (UserVO) session.getAttribute("user");
-		String id = user.getUserId();
+		UserVO vo = (UserVO) session.getAttribute("user");
+		String id = vo.getUserId();
+		// String id = ((UserVO)request.getSession().getAttribute("user")).getUserID();
 		
+		PrintWriter out = null;
 		
 		try {
-			PrintWriter out = response.getWriter();
+			out = response.getWriter();
 			
 			if(dao.userCheck(id, oldPw) == 0) {
 				htmlCode = "<script>\r\n"
@@ -47,8 +49,7 @@ public class ChangePwService implements IUserService {
                         + "history.back();\r\n"
                         + "</script>";
 				out.print(htmlCode); 
-				out.flush();
-				out.close();
+				out.flush();	
 			} else {
 				dao.changePassword(id, newPw);
 				htmlCode = "<script>\r\n"
@@ -61,6 +62,8 @@ public class ChangePwService implements IUserService {
 						
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			out.close();
 		}
 		
 

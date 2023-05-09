@@ -19,6 +19,8 @@ C:\Work\JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3484481645.ind
 \JspBasic\src\main\java
 C:\Work\JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1532305959.index
 \JspBasic\src\main\java
+C:\Work\JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4207765222.index
+\MyWeb\src\main\java
 C:\Work\JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3087651050.index
 \JspBasic\src\main\java
 C:\Work\JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1741820244.index
