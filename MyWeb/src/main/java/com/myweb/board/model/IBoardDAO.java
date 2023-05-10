@@ -2,6 +2,8 @@ package com.myweb.board.model;
 
 import java.util.List;
 
+import com.myweb.board.commons.PageVO;
+
 public interface IBoardDAO {
 
 	//글 등록 메서드
@@ -25,5 +27,8 @@ public interface IBoardDAO {
 	//조회수를 올려주는 메서드
 	void upHit(int bId);
 	
-	
+    // 총 게시물 수를 알려주는 메서드
+    int countArticles();
+
+	List<BoardVO> listBoard(PageVO paging);
 }
